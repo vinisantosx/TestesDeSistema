@@ -69,6 +69,7 @@ public class VendaTest {
     @Test
     void testarVendaDeProdutoNuloDeveFalhar() {
         Venda v = new Venda(null, 3);
+        Produto produto = v.getProduto();
         assertThrows(NullPointerException.class, v::realizarVenda);
     }
 
